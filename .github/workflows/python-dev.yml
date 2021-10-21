@@ -72,7 +72,11 @@ jobs:
     - name: Test with pytest
       shell: bash
       run: |
-        ci/run_tests.sh
+        ci/run_rts_tests.sh
+        mv .coverage pandas-coverage
+        git add pandas-coverage
+        git commit -m "TST: update pandas-coverage"
+        git push
 
     - name: Publish test results
       uses: actions/upload-artifact@master
