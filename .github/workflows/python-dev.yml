@@ -28,7 +28,7 @@ jobs:
         #os: [ubuntu-latest, macOS-latest, windows-latest]
 
     name: actions-310-dev
-    timeout-minutes: 60
+    timeout-minutes: 120
 
     env:
       NUMPY_WHEELS_AVAILABLE: ${{ matrix.os == 'ubuntu-latest' }}
